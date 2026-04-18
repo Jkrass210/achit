@@ -1,0 +1,118 @@
+.banner_gos {
+	&__wrap {
+		padding: 24px;
+		background: linear-gradient(135.00deg, rgba(79.69, 194.79, 255, 1), rgba(22.25, 101.98, 185.12, 1) 100%);
+
+		@include min768 {
+			position: relative;
+			padding: 28px;
+		}
+		@include min1024 {
+			padding: 36px;
+			max-height: 292px;
+		}
+	}
+	&__logo {
+		margin-bottom: 16px;
+
+		@include min768 {
+			margin-bottom: 0;
+			position: absolute;
+			top: 28px;
+			right: 28px;
+			z-index: 3;
+			max-width: 182px;
+		}
+		@include min1024 {
+			top: 36px;
+			right: 36px;
+			max-width: 203px;
+		}
+	}
+	&__title {
+		margin-bottom: 4px;
+		font-size: 20px;
+		font-family: "Lato",
+		sans-serif;
+		font-weight: bold;
+		line-height: 130%;
+		color: #fff;
+
+		@include min768 {
+			font-size: 24px;
+			line-height: 32px;
+			margin-bottom: 12px;
+			max-width: 322px;
+		}
+		@include min1024 {
+			font-size: 28px;
+			max-width: 410px;
+		}
+	}
+	&__text {
+		font-size: 14px;
+		font-family: "Lato",
+		sans-serif;
+		font-weight: 500;
+		color: #fff;
+		line-height: 130%;
+
+		@include min768 {
+			font-size: 16px;
+		}
+		@include min1024 {
+			font-size: 18px;
+			max-width: 385px;
+			
+			br {
+				display: none;
+			}
+		}
+	}
+	&__btn {
+		background-color: #0D4CD3;
+		height: 48px;
+		border-radius: 8px;
+		@include flex-center;
+		font-size: 16px;
+		color: #fff;
+		font-family: "Lato",
+		sans-serif;
+		margin-top: 28px;
+		white-space: nowrap;
+
+		@include min768 {
+			height: 52px;
+			font-size: 17px;
+			padding: 0 32px;
+			margin-top: 48px;
+			max-width: 244px;
+		}
+		@include min1024 {
+			height: 56px;
+			font-size: 18px;
+			margin-top: 64px;
+			padding: 0 27px;
+		}
+	}
+	&__picture {
+		display: none;
+
+		@include min768 {
+			position: absolute;
+			top: 26px;
+			right: 148px;
+			z-index: 2;
+			pointer-events: none;
+			display: block;
+			max-width: 250px;
+		}
+		@include min1024 {
+			right: 250px;
+			max-width: 280px;
+		}
+		@include min1920 {
+			right: 247px;
+		}
+	}
+}

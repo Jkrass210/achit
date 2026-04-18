@@ -1,0 +1,91 @@
+.resources_block {
+	background-color: #F5F5F7;
+	// border-top: 1px solid #E5E5EB;
+	// border-bottom: 1px solid #E5E5EB;
+	padding: 32px 0;
+
+	@include min768 {
+		padding: 44px 0;
+	}
+	@include min1920 {
+		padding: 56px 0;
+	}
+
+	.swiper {
+		@include min768 {
+			overflow: visible;
+		}
+		&-wrapper {
+			@include min768 {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 20px;
+			}
+			@include min1920 {
+				gap: 32px;
+			}
+		}
+		&-slide {
+			@include min768 {
+				flex: 0 0 calc((100% - 20px) / 2);
+				max-width: calc((100% - 20px) / 2);
+			}
+			@include min1920 {
+				flex: 0 0 calc((100% - 64px) / 3);
+				max-width: calc((100% - 64px) / 3);
+			}
+		}
+	}
+
+	.swiperNavigate {
+		@include min768 {
+			display: none !important;
+		}
+	}
+}
+.res_card {
+	height: 100%;
+	min-height: 196px;
+	padding: 28px 28px 24px 28px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: #fff;
+
+	@include min1024 {
+		transition: all 250ms ease;
+
+		&:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	&__icon {
+
+	}
+	&__text {
+		color: #333;
+
+		@include min1024 {
+			font-size: 18px;
+		}
+	}
+}
+.swiperNavigate {
+	@include flex-center;
+	margin-top: 12px;
+	gap: 8px;
+
+	.swiper-pagination-bullet {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: #D9D9DE;
+		cursor: pointer;
+
+		&.swiper-pagination-bullet-active {
+			background-color: #0061D9;
+		}
+	}
+}

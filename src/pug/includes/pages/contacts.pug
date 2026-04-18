@@ -1,0 +1,47 @@
+main
+  .container
+    .breadcrumbs
+      a(href="/") Главная страница
+      span Контакты
+    h1.page_title Контактная информация
+    .page_cont
+      .page_cont__left
+        .page_cont__list-info
+          .box-info
+            span.title Адрес
+            span.text 623230, Свердловская область,<br>пгт. Ачит, ул. Кривозубова, 2
+          .box-info
+            span.title Телефон/факс
+            a.phone(href="tel:+7(34391)7−01−24") +7 (34391) 7−01−24
+          .box-info
+            span.title Телефон/факс
+            a.mail(href="mailto:dumaachit@mail.ru") dumaachit@mail.ru
+          .box-info
+            span.title Председатель
+            span.text Торопов Алексей Викторович
+          .box-info
+            span.title Заместитель председателя
+            span.text Никифоров Сергей Николаевич
+          .box-info
+            span.title Аппарат Думы
+            span.text Главный специалист Стахеева Екатерина Алексеевна
+            span.text Ведущий специалист Белоусова Марина Юрьевна
+          .box-info
+            span.title Режим работы
+            ul.list
+              li.list__item
+                span.text Понедельник — Четверг:<br>С 8.18 до 17.30 Обед с 13.00 до 14.00
+              li.list__item
+                span.text Пятница:<br>С 8.18 до 16.30  Обед с 13.00 до 14.00
+              li.list__item
+                span.text Суббота, воскресенье:<br>Выходной
+        .page_cont__box-btn
+          a.link-download.btn-color-eye(href="#" download)
+            span.text Скачать реквизиты
+            span.svg
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <path d="M5.5 18.3333H16.5M11 3.66663V14.6666M11 14.6666L14.2083 11.4583M11 14.6666L7.79167 11.4583" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+      .page_cont__right
+        .page_cont__map(id="map")
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A656b98c26df4f453c88d3e88bdff712840f74375259dd0a7df7cf12b42885f97&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>

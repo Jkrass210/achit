@@ -1,0 +1,83 @@
+.static-anchor {
+  &-text {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 32px;
+    }
+    &__menu {
+      width: calc(100% + 32px);
+      margin: 0 -16px;
+      @media (min-width: 768px) {
+        width: calc(100% + 40px);
+        margin: 0 -20px;
+      }
+      @media (min-width: 1024px) {
+        margin: 0;
+        width: calc(336 / 1264 * 100%);
+      }
+    }
+    &__info {
+      flex: 1;
+    }
+  }
+  &-menu {
+    padding: 0 16px;
+    width: 100%;
+    position: sticky;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    background-color: transparent;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      padding: 0 20px;
+    }
+    @media (min-width: 1024px) {
+      gap: 0;
+      padding: 23px 24px;
+      flex-direction: column;
+      background-color: var(--gray-100, #F5F5F7);
+    }
+    a {
+      white-space: nowrap;
+      padding: 5px 10px;
+      height: 53px;
+      width: 100%;
+      color: var(--main-text, #333);
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--gray-100, #F5F5F7);
+      transition: background-color 0.4s ease-in-out;
+      @media (min-width: 1024px) {
+        white-space: wrap;
+        justify-content: start;
+        background-color: transparent;
+      }
+      &:focus,&:focus-visible {
+        outline: none;
+      }
+      &.active {
+        background-color: var(--gray-200, #E5E5EB);
+      }
+      @media (min-width: 768px) {
+        &:focus-visible,&:hover {
+          background-color: var(--gray-200, #E5E5EB);
+        }
+      }
+    }
+  }
+}

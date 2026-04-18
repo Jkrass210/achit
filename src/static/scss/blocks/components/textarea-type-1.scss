@@ -1,0 +1,91 @@
+.textarea-type-1 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &:has(.error) {
+    .error-message {
+      display: inline-block;
+    }
+  }
+
+  .error-message {
+    display: none;
+    color: var(--error-text, #D51A1A);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128.571%;
+  }
+
+  &__input {
+    resize: none;
+    max-width: 100%;
+    width: 100%;
+    height: 168px;
+    padding: 16px 20px;
+    color: var(--title, #000);
+    font-family: "Golos Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    border: 1px solid var(--gray-300, #D9D9DE);
+    background-color: var(--white, #FFF);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    &.error {
+      color: #D51A1A;
+      border-color: #D51A1A;
+
+      &::placeholder {
+        color: #D51A1A;
+      }
+
+      &+.textarea-type-1__name {
+        color: #D51A1A;
+      }
+    }
+
+    @media (min-width: 768px) {
+      padding: 20px 20px;
+      font-size: 18px;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+
+      &+.textarea-type-1__name {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__name {
+    opacity: 0;
+    visibility: visible;
+    pointer-events: none;
+    padding: 4px 8px;
+    position: absolute;
+    left: 12px;
+    transform: translateY(-50%);
+    color: var(--footnotes, #76767A);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    background-color: var(--white, #FFF);
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+  }
+}

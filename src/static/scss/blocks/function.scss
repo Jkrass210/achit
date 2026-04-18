@@ -1,0 +1,206 @@
+@function rem($px) {
+	@return ($px / 16)+rem;
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content;
+	}
+
+	&:-moz-placeholder {
+		@content;
+	}
+
+	&::-moz-placeholder {
+		@content;
+	}
+
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+
+@mixin max1740 {
+	@media (max-width: 1740px) {
+		@content;
+	}
+}
+
+@mixin max1600 {
+	@media (max-width: 1600px) {
+		@content;
+	}
+}
+
+@mixin max1440 {
+	@media (max-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin max1320 {
+	@media (max-width: 1320px) {
+		@content;
+	}
+}
+
+@mixin max1200 {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin min1200 {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin max1024 {
+	@media (max-width: 1024px) {
+		@content;
+	}
+}
+
+
+@mixin max992 {
+	@media (max-width: 991px) {
+		@content;
+	}
+}
+
+@mixin min992 {
+	@media (min-width: 992px) {
+		@content;
+	}
+}
+
+@mixin max768 {
+	@media (max-width: 767px) {
+		@content;
+	}
+}
+
+@mixin min768 {
+	@media (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin max1024 {
+	@media (max-width: 1023px) {
+		@content;
+	}
+}
+
+@mixin min1024 {
+	@media (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin max1920 {
+	@media (max-width: 1439px) {
+		@content;
+	}
+}
+
+@mixin min1920 {
+	@media (min-width: 1440px) {
+		@content;
+	}
+}
+
+@mixin max660 {
+	@media (max-width: 660px) {
+		@content;
+	}
+}
+
+@mixin max600 {
+	@media (max-width: 600px) {
+		@content;
+	}
+}
+
+@mixin max540 {
+	@media (max-width: 540px) {
+		@content;
+	}
+}
+
+@mixin max480 {
+	@media (max-width: 480px) {
+		@content;
+	}
+}
+
+@mixin max350 {
+	@media (max-width: 350px) {
+		@content;
+	}
+}
+
+
+// supports
+
+@mixin push--auto {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+}
+
+@mixin truncate($truncation-boundary) {
+	max-width: $truncation-boundary;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin bsh($top, $left, $blur, $size, $color, $inset: false) {
+	@if $inset {
+		-webkit-box-shadow: inset $top $left $blur $size $color;
+		-moz-box-shadow: inset $top $left $blur $size $color;
+		box-shadow: inset $top $left $blur $size $color;
+	}
+
+	@else {
+		-webkit-box-shadow: $top $left $blur $size $color;
+		-moz-box-shadow: $top $left $blur $size $color;
+		box-shadow: $top $left $blur $size $color;
+	}
+}
+
+@mixin tsh($x, $y, $blur, $color) {
+	text-shadow: $x $y $blur $color;
+}
+
+// Скругление на каждый угол
+// пример: @include br-c(10px,0,10px,0);
+@mixin br-c($p1, $p2, $p3, $p4) {
+	-webkit-border-radius: $p1 $p2 $p3 $p4;
+	-moz-border-radius: $p1 $p2 $p3 $p4;
+	-ms-border-radius: $p1 $p2 $p3 $p4;
+	border-radius: $p1 $p2 $p3 $p4;
+}
+
+// Горизонтальная линия
+// пример: @include sep-h(80%,2px,blue);
+@mixin sep-h($w, $h, $color) {
+	&:after {
+		content: "";
+		display: block;
+		height: $h;
+		width: $w;
+		margin: 0 auto;
+		background-color: $color;
+	}
+}
+

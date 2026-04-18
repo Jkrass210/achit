@@ -1,0 +1,18 @@
+extends ../layout/layout
+block vars
+	- var title = 'Текстовая страница 2';
+
+block header
+
+block content
+	.wrapper
+		include ../includes/components/_header
+		include ../includes/pages/text2
+		include ../includes/components/_footer
+
+
+		include ../includes/components/_mobile_menu
+		
+
+block footer
+	include ../includes/script

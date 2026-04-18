@@ -1,0 +1,173 @@
+main
+  .container
+    .breadcrumbs
+      a(href="/") Главная страница
+      span Депутаты
+    h1.page_title Депутаты
+    .page_deput
+      .page_deput__line-nav.line-nav
+        ul.line-nav__list
+          li.line-nav__item
+            a.line-nav__link(href="#")
+              span.text Список депутатов
+              span.text-mob Показать списком
+          li.line-nav__item
+            a.line-nav__link.active(href="#")
+              span.text Распределение по округам
+              span.text-mob Показать по округам
+      .page_deput__all-district
+        .page_deput__item-district
+          .page_deput__desc-district.desc-district
+            h3.desc-district__title Избирательный округ №1
+            .desc-district__desc В округ входят следующие населенные пункты и улицы:<br>
+              b пгт. Ачит
+              p Улицы: Бажова, пер. Бажова, Береговая, Гагарина, Дружбы, Заря, Калинина, Красных Партизан, Кривозубова, Кусакина, Механизаторов, Молодежная, Новоселова, Октября, Пионерская, Первомайская, Свободы, Строителей, Фрунзе, Чапаева, Луговая, Садовая, Полевая, Зелёная, Прибрежная<br>
+              b д. Дербушева<br>
+              b с. Бакряж<br>
+              b с. Быково<br>
+            //ul.desc-district__list
+              li.desc-district__item
+                .district
+                  span.name пгт. Ачит.
+                  p.streets <b>Улицы:</b> Бажова, пер. Бажова, Береговая, Гагарина, Дружбы, Заря, Калинина, Красных Партизан, Кривозубова, Кусакина, Механизаторов, Молодежная, Новоселова, Октября, Пионерская, Первомайская, Свободы, Строителей, Фрунзе, Чапаева, Луговая, Садовая, Полевая, Зелёная, Прибрежная
+              li.desc-district__item
+                .district
+                  span.name д. Дербушева
+              li.desc-district__item
+                .district
+                  span.name с. Бакряж
+              li.desc-district__item
+                .district
+                  span.name с. Быково
+            p.desc-district__number Список депутатов избирательного округа №1
+          .page_deput__list-wrapper
+            ul.page_deput__list
+              li
+                article.card-person
+                  a.card-person__link(href="/") Чайников Александр Михайлович
+                  .card-person__img
+                    img(src="img/card-person/1.jpg", alt="person")
+                  .card-person__info
+                    h4.card-person__title.hov Чайников Александр Михайлович
+                    .box-info
+                      span.title Образование:
+                      span.text Среднее профессиональное
+                    .box-info
+                      span.title Место работы:
+                      span.text СПК «Бакряжский», главный инженер.
+                    .box-status
+                      p.desc Выдвинут в порядке самовыдвижения.
+                    .box-desc
+                      p Член комиссии по муниципальному хозяйству, строительству и экологии и комиссии по нормативно-правовым вопросам и связям с общественностью
+              li
+                article.card-person
+                  a.card-person__link(href="/") Ибрагимов Рустам Ильдарович
+                  .card-person__img
+                    img(src="img/card-person/2.jpg", alt="person")
+                  .card-person__info
+                    h4.card-person__title.hov Ибрагимов Рустам Ильдарович
+                    .box-info
+                      span.title Образование:
+                      span.text Среднее профессиональное
+                    .box-info
+                      span.title Место работы:
+                      span.text ГБУЗ СО «Ачитская центральная районная больница», фельдшер скорой медицинской помощи.
+                    .box-status
+                      p.desc Выдвинут в порядке самовыдвижения.
+                    .box-desc
+                      p Член комиссии по социальной политике и общественным отношениям и комиссии по нормативно-правовым вопросам и связям с общественностью
+              li
+                article.card-person
+                  a.card-person__link(href="/") Идиятова Лилия Миргазимовна
+                  .card-person__img
+                    img(src="img/card-person/3.jpg", alt="person")
+                  .card-person__info
+                    h4.card-person__title.hov Идиятова Лилия Миргазимовна
+                    .box-info
+                      span.title Образование:
+                      span.text Высшее
+                    .box-info
+                      span.title Место работы:
+                      span.text ГБУЗ СО «Ачитская центральная районная больница», исполняющая обязанности главного врача
+                    .box-status
+                      p.desc Выдвинута ВПП «Единая Россия».
+                    .box-desc
+                      p Член комиссии по социальной политике и общественным отношениям
+        .page_deput__item-district
+          .page_deput__desc-district.desc-district
+            h3.desc-district__title Избирательный округ №2
+            p.desc-district__desc В округ входят следующие населенные пункты и улицы:
+            ul.desc-district__list
+              li.desc-district__item
+                .district
+                  span.name пгт. Ачит.
+                  p.streets <b>Улицы:</b> Заводская, Заречная, Кирова, Коренкина, Кузнецова, Ленина, Лесная, Максима Горького, Мелиораторов, Мира, Нагорная, Новая, пер. Первомайский, Прожекторская, Пролетарская, Пушкина, Советская, Труда, Уральская, Центральная, Шулепова, пер. Энергетиков, Юбилейная, 8 Марта, Солнечная, Ясная, Светлая, Восточная
+              li.desc-district__item
+                .district
+                  span.name п. Заря
+              li.desc-district__item
+                .district
+                  span.name п. Зернобаза
+              li.desc-district__item
+                .district
+                  span.name д. Кочкильда
+            p.desc-district__number Список депутатов избирательного округа №2
+          .page_deput__list-wrapper
+            ul.page_deput__list
+              li
+                article.card-person
+                  a.card-person__link(href="/") Ибрагимов Рустам Ильдарович
+                  .card-person__img
+                    img(src="img/card-person/2.jpg", alt="person")
+                  .card-person__info
+                    h4.card-person__title.hov Ибрагимов Рустам Ильдарович
+                    .box-info
+                      span.title Образование:
+                      span.text Среднее профессиональное
+                    .box-info
+                      span.title Место работы:
+                      span.text ГБУЗ СО «Ачитская центральная районная больница», фельдшер скорой медицинской помощи.
+                    .box-status
+                      p.desc Выдвинут в порядке самовыдвижения.
+                    .box-desc
+                      p Член комиссии по социальной политике и общественным отношениям и комиссии по нормативно-правовым вопросам и связям с общественностью
+              li
+                article.card-person
+                  a.card-person__link(href="/") Идиятова Лилия Миргазимовна
+                  .card-person__img
+                    img(src="img/card-person/3.jpg", alt="person")
+                  .card-person__info
+                    h4.card-person__title.hov Идиятова Лилия Миргазимовна
+                    .box-info
+                      span.title Образование:
+                      span.text Высшее
+                    .box-info
+                      span.title Место работы:
+                      span.text ГБУЗ СО «Ачитская центральная районная больница», исполняющая обязанности главного врача
+                    .box-status
+                      p.desc Выдвинута ВПП «Единая Россия».
+                    .box-desc
+                      p Член комиссии по социальной политике и общественным отношениям
+        .page_deput__item-district
+          .page_deput__map-wrapper
+            h3.page_deput__map-title Карта изберательных округов
+            .page_deput__box-map
+              .page_deput__map-img
+                img(src="img/map/map1.jpg", alt="map")
+              .page_deput__map-info.map-info
+                ul.map-info__list
+                  li.map-info__item
+                    img(src="img/map/1.jpg", alt="color")
+                    span Ачитский округ №1
+                  li.map-info__item
+                    img(src="img/map/2.jpg", alt="color")
+                    span Ачитский округ №2
+                  li.map-info__item
+                    img(src="img/map/3.jpg", alt="color")
+                    span Русскопотамский округ №3
+                  li.map-info__item
+                    img(src="img/map/4.jpg", alt="color")
+                    span Уфимский округ №4
+                  li.map-info__item
+                    img(src="img/map/5.jpg", alt="color")
+                    span Арийский №5

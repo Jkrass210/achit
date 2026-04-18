@@ -1,0 +1,63 @@
+.box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  .title {
+    color: var(--footnotes, #76767A);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 133.333%;
+  }
+  .text {
+    color: var(--main-text, #333);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    @media (min-width: 768px) {
+      font-size: 18px;
+    }
+  }
+  .phone {
+    color: var(--main-text, #333);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    transition: color 0.4s ease-in-out;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 768px) {
+      font-size: 18px;
+      &:focus-visible, &:hover {
+        color: var(--blue-200, #0050B2);
+      }
+    }
+  }
+  .mail {
+    color: var(--blue-200, #0050B2);
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    transition: color 0.4s ease-in-out;
+    text-decoration: underline;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 768px) {
+      font-size: 18px;
+      &:focus-visible, &:hover {
+        color: var(--main-text, #333);
+      }
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

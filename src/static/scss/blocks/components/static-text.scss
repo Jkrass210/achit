@@ -1,0 +1,178 @@
+.static-text {
+  color: var(--title, #000);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  @media (min-width: 1024px) {
+    font-size: 18px;
+  }
+  *:not(:last-child) {
+    margin-bottom: 16px;
+    @media (min-width: 1024px) {
+      margin-bottom: 20px;
+    }
+  }
+  h1 {
+    color: var(--title, #000);
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    @media (min-width: 1024px) {
+      font-size: 36px;
+    }
+    & + p {
+      color: var(--footnotes, #76767A);
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      @media (min-width: 1024px) {
+        font-size: 24px;
+      }
+    }
+  }
+  h2 {
+    color: var(--title, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    @media (min-width: 1024px) {
+      font-size: 28px;
+    }
+    & + p {
+      color: var(--footnotes, #76767A);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+      @media (min-width: 1024px) {
+        font-size: 18px;
+      }
+    }
+  }
+  h3 {
+    color: var(--title, #000);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @media (min-width: 1024px) {
+      line-height: 125%;
+    }
+  }
+  h4 {
+    color: var(--title, #000);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @media (min-width: 1024px) {
+      line-height: 125%;
+    }
+  }
+  h5 {
+    color: var(--title, #000);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @media (min-width: 1024px) {
+      line-height: 125%;
+    }
+  }
+  h6 {
+    color: var(--title, #000);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @media (min-width: 1024px) {
+      line-height: 125%;
+    }
+  }
+  a {
+    color: var(--blue-200, #0050B2);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    transition: color 0.4s ease-in-out;
+    @media (min-width: 1024px) {
+      font-size: 18px;
+    }
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 768px) {
+      &:focus-visible,&:hover {
+        color: var(--title, #000);
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      padding-left: 24px;
+      margin: 0 !important;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        top: 7px;
+        left: 9px;
+        background-color: #000;
+        border-radius: 100%;
+      }
+    }
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      counter-increment: item;
+      display: flex;
+      gap: 4px;
+      margin: 0 !important;
+      &::before {
+        text-align: end;
+        min-width: 22px;
+        content: counter(item) ".";
+      }
+    }
+  }
+}
+
+/**/
+.static-text {
+  .page_docs {
+    margin-bottom: 0;
+  }
+  .page_docs__header {
+    margin-bottom: 0;
+    .col {
+      margin-bottom: 0;
+    }
+  }
+  .docs_info__download {
+    span {
+      margin-bottom: 0;
+    }
+  }
+  .pagination {
+    margin-bottom: 0;
+    a {
+      margin-bottom: 0;
+    }
+  }
+}
+/**/

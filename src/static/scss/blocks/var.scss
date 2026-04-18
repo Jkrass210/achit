@@ -1,0 +1,20 @@
+$container: 1264px;
+
+$border_min: 5px;
+$border_max: 10px;
+
+$sm_mr: 16px; // mobile margin right
+$sm_ml: 16px; // mobile margin left
+
+// color scheme
+$c_gray: #A5B9DE;
+$c_blue: #0072CA;
+$c_red: #E73173;
+$c_error: #FF6262;
+$c_dark_blue: #1F3868;
+$c_dark_gradient: linear-gradient(92deg, #0060AA -51.33%, #092C47 74.89%);
+$c_blue_gradient: linear-gradient(114deg, #6297FF 8.04%, #193263 96.51%);
+$c_red_gradient: linear-gradient(114deg, #EB246C 8.04%, #CE4778 96.51%);
+
+$bs_cards: 0px 4px 10px 0px rgba(0, 0, 0, 0.15); // card box shadow
+$bs_default: 0px 4px 4px 0px rgba(0, 0, 0, 0.10); // default box shadow

@@ -1,0 +1,43 @@
+.input-checkbox-type-1 {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  gap: 8px;
+  align-items: start;
+  &__input {
+    cursor: pointer;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    &.error + .input-checkbox-type-1__castom {
+      border-color: #d51a1a;
+    }
+    &:checked + .input-checkbox-type-1__castom {
+      border: none;
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+  &__castom {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin: 2px;
+    border: 1px solid var(--blue-100, #0061D9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      opacity: 0;
+    }
+  }
+  .text {
+    padding: 3px;
+    color: var(--main-text, #333);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}

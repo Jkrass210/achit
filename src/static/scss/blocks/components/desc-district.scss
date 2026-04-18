@@ -1,0 +1,70 @@
+.desc-district {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: var(--title, #000);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+  &__desc {
+    padding-top: 12px;
+    color: var(--footnotes, #76767A);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+    b {
+      color: #000;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 125%;
+    }
+    p {
+      color: #000;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+    }
+  }
+  &__list {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    .district {
+      color: #000;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 125%;
+      .name {
+        font-size: 16px;
+        font-weight: 600;
+      }
+      b {
+        font-weight: 400;
+      }
+    }
+  }
+  &__number {
+    padding-top: 28px;
+    color: var(--title, #000);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}

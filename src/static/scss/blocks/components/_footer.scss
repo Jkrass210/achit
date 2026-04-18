@@ -1,0 +1,301 @@
+.footer {
+	padding-top: 32px;
+	padding-bottom: 50px;
+	background-color: #F5F5F7;
+
+	@include min768 {
+		padding: 36px 0;
+	}
+	@include min1024 {
+		padding-top: 64px;
+		padding-bottom: 32px;
+	}
+
+	.container {
+		@include min1024 {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	&__top {
+		@include min768 {
+			display: flex;
+			flex-direction: column;
+		}
+		@include min1024 {
+			flex: 0 0 361px;
+			max-width: 361px;
+			margin-right: 28px;
+		}
+		@include min1920 {
+			flex: 0 0 400px;
+			max-width: 400px;
+			margin-right: 34px;
+		}
+		.sitelogo {
+			margin-bottom: 23px;
+			padding: 0;
+
+			@include min768 {
+				order: 0;
+			}
+			@include min1024 {
+				margin-bottom: 40px;
+			}
+		}
+		&_block {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+				@include min768 {
+					margin-bottom: 0;
+				}
+				@include min1024 {
+					margin-bottom: 20px;
+				}
+				@include min1920 {
+					margin-bottom: 24px;
+				}
+			}
+
+			@include min768 {
+				flex: 0 0 calc((100% - 40px) / 3);
+				max-width: calc((100% - 40px) / 3);
+			}
+			@include min1024 {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+
+			.btn {
+				width: 100%;
+				height: 48px;
+				@include flex-center;
+				border: 1px solid #0061D9;
+				margin-top: 20px;
+				color: #0061D9;
+
+				@include min768 {
+					transition: 250ms ease;
+					
+					&:hover {
+						background-color: #0061D9;
+						color: #fff;
+					}
+				}
+				@include min1024 {
+					margin-top: 28px;
+					height: 56px;
+					max-width: 272px;
+				}
+				@include min1920 {
+					height: 64px;
+					max-width: 324px;
+					margin-top: 40px;
+					font-size: 17px;
+				}
+			}
+		}
+		&_row {
+			@include min768 {
+				display: flex;
+				gap: 20px;
+				order: 99;
+				border-bottom: 1px solid #E5E5EB;
+				padding-bottom: 48px;
+				margin-bottom: 32px;
+			}
+			@include min1024 {
+				display: block;
+				gap: 0;
+				border-bottom: 0;
+				padding-bottom: 0;
+				margin-bottom: 0;
+				max-width: 281px;
+			}
+			@include min1920 {
+				max-width: 400px;
+			}
+		}
+	}
+	&__menu {
+		margin-top: 23px;
+		padding-bottom: 28px;
+		margin-bottom: 28px;
+		border-bottom: 1px solid #E5E5EB;
+
+		@include min768 {
+			order: 1;
+			border-bottom: 0;
+			padding-bottom: 0;
+			margin-bottom: 36px;
+			column-count: 3;
+			margin-top: 0;
+		}
+		@include min1024 {
+			flex: 1;
+			min-width: 0;
+			margin-bottom: 0;
+			
+		}
+		@include min1920 {
+			column-gap: 32px;
+			column-count: 4;
+		}
+
+		> li {
+			&:not(:last-child) {
+				margin-bottom: 20px;
+				@include min1920 {
+					margin-bottom: 24px;
+				}
+			}
+			> a {
+				font-weight: 500;
+				color: #000;
+				font-size: 16px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+
+				@include min1024 {
+					font-size: 17px;
+				}
+				@include min1920 {
+					font-size: 18px;
+				}
+			}
+
+			ul {
+				margin-top: 12px;
+				@include min768 {
+					margin-top: 16px;
+				}
+				@include min1920 {
+					margin-top: 20px;
+				}
+				li {
+					&:not(:last-child) {
+						margin-bottom: 16px;
+						@include min768 {
+							margin-bottom: 20px;
+						}
+					}
+					a {
+						color: #333;
+
+						&:hover {
+							text-decoration: underline;
+						}
+
+						@include min1024 {
+							font-size: 17px;
+						}
+
+						@include min1920 {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		font-size: 14px;
+		line-height: 20px;
+		color: #76767A;
+
+		@include min768 {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			gap: 12px;
+		}
+		@include min1024 {
+			order: 99;
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin-top: 74px;
+			padding-top: 32px;
+			border-top: 1px solid #E5E5EB;
+		}
+		@include min1920 {
+			margin-top: 52px;
+		}
+
+		a {
+			margin-bottom: 8px;
+			font-size: 14px;
+			line-height: 20px;
+			color: #76767A;
+			text-decoration: underline;
+
+			@include min768 {
+				margin-bottom: 0;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		span {
+			font-size: 14px;
+			line-height: 20px;
+			color: #76767A;
+		}
+	}
+}
+.address {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	span {
+		&:first-child {
+			color: #76767A;
+			font-size: 15px;
+			line-height: 20px;
+
+			@include min1920 {
+				font-size: 16px;
+			}
+		}
+		&:last-child {
+			font-size: 17px;
+			color: #333;
+
+			@include min1024 {
+				font-size: 18px;
+			}
+			@include min1920 {
+				font-size: 20px;
+			}
+			br {
+				@include min1024 {
+					display: none;
+				}
+			}
+		}
+	}
+	a {
+		font-size: 17px;
+		color: #5A5A5A;
+		text-decoration: underline;
+		align-self: flex-start;
+
+		@include min1024 {
+			font-size: 18px;
+		}
+		@include min1920 {
+			font-size: 20px;
+		}
+
+		&:hover, &:active {
+			text-decoration: none;
+		}
+	}
+
+	
+}

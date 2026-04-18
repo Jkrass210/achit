@@ -1,0 +1,163 @@
+.home_news_slider {
+	.swiperBottom {
+		margin-top: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include min768 {
+			margin-top: 28px;
+		}
+		@include min1920 {
+			margin-top: 50px;
+		}
+	}
+}
+
+.swiperPagination {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 64px;
+	width: 100%;
+	&__left,
+	&__right {
+		flex: 0 0 24px;
+		max-width: 24px;
+		width: 24px;
+		height: 24px;
+		@include flex-center;
+		cursor: pointer;
+
+		&.swiper-button-disabled {
+			pointer-events: none;
+			opacity: 0.5;
+		}
+		&.swiper-button-lock {
+			display: none;
+		}
+
+		&:hover, &:active {
+			svg {
+				path {
+					stroke: #0061D9;
+				}
+			}
+		}
+	}
+}
+.link_all {
+	display: flex;
+	align-items: center;
+	color: #333;
+	line-height: 99%;
+
+	&:hover {
+		color: #0061D9;
+
+		span {
+			color: #0061D9;
+		}
+	}
+
+	span {
+		color: #333;
+		line-height: 99%;
+	}
+	svg,i,img {
+		margin-left: 11px;
+	}
+}
+
+.news_card {
+	display: block;
+	@include min768 {
+		display: flex;
+	}
+	@include min1024 {
+		transition: 250ms ease;
+
+		&:hover {
+			.news_card__title {
+				color: #0061D9;
+			}
+		}
+	}
+	&:not(:last-child) {
+		margin-bottom: 16px;
+		padding-bottom: 16px;
+		border-bottom: 1px solid #F5F5F7;
+
+		@include min768 {
+			padding-bottom: 20px;
+			margin-bottom: 20px;
+		}
+		@include min1024 {
+			padding-bottom: 24px;
+			margin-bottom: 24px;
+		}
+		@include min1920 {
+			padding-bottom: 32px;
+			margin-bottom: 32px;
+		}
+	}
+	&__image {
+		@include min768 {
+			flex: 0 0 164px;
+			max-width: 164px;
+			margin-right: 20px;
+			height: 164px;
+		}
+		img {
+			width: 100%;
+			height: auto;
+
+			@include min768 {
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+	&__content {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+
+		@include min768 {
+			margin-top: 0;
+			flex: 1;
+			min-width: 0;
+		}
+	}
+	&__date {
+		height: 32px;
+		padding: 0 12px;
+		@include flex-center;
+		align-self: flex-start;
+		background-color: #F5F5F7;
+		font-size: 14px;
+	}
+	&__title {
+		margin-top: 12px;
+		font-weight: 500;
+		color: #333;
+		line-height: 125%;
+
+		@include min768 {
+			font-size: 17px;
+		}
+		@include min1024 {
+			font-size: 18px;
+		}
+	}
+	&__text {
+		margin-top: 12px;
+		font-size: 14px;
+		color: #76767A;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

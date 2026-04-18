@@ -1,0 +1,244 @@
+.catalog_modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 105;
+	display: none;
+
+	@include min1920 {
+		overflow-y: auto;
+		height: 100%;
+	}
+
+	&__close {
+		width: 44px;
+		height: 44px;
+		background-color: #F5F5F7;
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		@include flex-center;
+
+		&:hover {
+			background-color: #0061D9;
+
+			svg {
+				path {
+					stroke: #fff;
+				}
+			}
+		}
+
+		@include min768 {
+			width: 52px;
+			height: 52px;
+		}
+		@include min1024 {
+			width: 48px;
+			height: 48px;
+		}
+	}
+	&__wrapper {
+		padding: 72px 16px 32px 16px;
+		
+		max-width: 1264px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include max1920 {
+			overflow-y: auto;
+			height: 100%;
+		}
+
+		@include min768 {
+			padding: 88px 20px;
+		}
+		@include min1024 {
+			padding: 76px 24px;
+		}
+		@include min1920 {
+			padding: 80px 0;
+		}
+
+		.search_form {
+			position: relative;
+			width: 100%;
+
+			@include min768 {
+				display: flex;
+			}
+
+			.search_form__input {
+				@include min768 {
+					margin-right: 8px;
+				}
+				@include min1024 {
+					margin-right: 12px;
+				}
+				@include min1920 {
+					margin-right: 24px;
+				}
+				svg {
+					display: none;
+
+					@include min768 {
+						display: block;
+					}
+				}
+
+				input {
+					height: 44px;
+					padding: 0 40px 0 12px;
+					border-right: 1px solid #e5e5eb;
+
+					@include min768 {
+						height: 52px;
+						padding: 0 16px 0 48px;
+					}
+					@include min1024 {
+						height: 56px;
+					}
+				}
+			}
+
+			.search_form__submit {
+				@include max768 {
+					position: absolute;
+					top: 50%;
+					right: 12px;
+					transform: translateY(-50%);
+				}
+				@include min768 {
+					flex: 0 0 160px;
+					max-width: 160px;
+				}
+				@include min1024 {
+					flex: 0 0 180px;
+					max-width: 180px;
+				}
+
+				.btn {
+
+					@include max768 {
+						width: 20px;
+						height: 20px;
+						flex: 0 0 20px;
+						background-color: transparent;
+
+						span {
+							display: none;
+						}
+					}
+					@include min1024 {
+						height: 56px;
+					}
+					svg {
+						@include min768 {
+							display: none;
+						}
+					}
+
+					span {
+						@include min768 {
+							font-size: 16px;
+						}
+						@include min1024 {
+							font-size: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__menu {
+		margin-top: 28px;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		@include min768 {
+			margin-top: 73px;
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 52px 20px;
+		}
+		@include min1024 {
+			margin-top: 52px;
+			gap: 52px 32px;
+		}
+		@include min1920 {
+			margin-top: 64px;
+		}
+
+		&__block {
+			@include min768 {
+				flex: 0 0 calc((100% - 20px) / 2);
+				max-width: calc((100% - 20px) / 2);
+
+				&:last-child {
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+			}
+			@include min1024 {
+				flex: 0 0 calc((100% - 64px) / 3);
+				max-width: calc((100% - 64px) / 3);
+
+				&:last-child {
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+			}
+			> ul {
+				
+				> li {
+					
+					> a {
+						font-size: 20px;
+						line-height: 125%;
+						font-weight: 500;
+						color: #000;
+
+						&:hover {
+							color: #0061D9;
+						}
+
+						@include min1024 {
+							font-size: 24px;
+						}
+					}
+					ul {
+						margin-top: 16px;
+						@include min1024 {
+							margin-top: 24px;
+						}
+
+						li {
+							&:not(:last-child) {
+								margin-bottom: 16px;
+								@include min1024 {
+									margin-bottom: 18px;
+								}
+							}
+							a {
+								font-size: 16px;
+								line-height: 125%;
+								color: #333;
+								@include min1024 {
+									font-size: 18px;
+								}
+								&:hover {
+									color: #0061D9;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

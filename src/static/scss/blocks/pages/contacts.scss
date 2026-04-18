@@ -1,0 +1,32 @@
+.page_cont {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+  &__left {
+    width: 100%;
+    @media (min-width: 1024px) {
+      width: calc(481 / 1264 * 100%);
+    }
+  }
+  &__list-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__right {
+    flex: 1;
+  }
+  &__box-btn {
+    padding-top: 20px;
+  }
+  &__map {
+    width: 100%;
+    height: 288px;
+    @media (min-width: 1024px) {
+      height: 572px;
+    }
+  }
+}

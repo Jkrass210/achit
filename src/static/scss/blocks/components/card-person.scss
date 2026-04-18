@@ -1,0 +1,98 @@
+.card-person {
+  position: relative;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #D9D9DE;
+  @media (min-width: 768px) {
+    padding: 24px;
+    flex-direction: row;
+  }
+  &__link {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    @media (min-width: 768px) {
+      &:focus-visible,&:hover {
+        & + .card-person__img + .card-person__info {
+          .hov {
+            color: var(--blue-200, #0050B2);
+          }
+        }
+      }
+    }
+  }
+  &__img {
+    pointer-events: none;
+    margin: 0 auto;
+    width: 158px;
+    flex-shrink: 0;
+    height: 200px;
+    display: flex;
+    @media (min-width: 768px) {
+      margin: 0;
+      width: 188px;
+      height: 240px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__title {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 125%;
+    transition: color 0.4s ease-in-out;
+    @media (min-width: 768px) {
+      font-size: 20px;
+    }
+  }
+  .box-info {
+    gap: 2px;
+    .title {
+      font-size: 14px;
+      line-height: 142.857%;
+    }
+    .text {
+      font-size: 15px;
+      line-height: 125%;
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+  .box-status {
+    color: var(--main-text, #333);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  .box-desc {
+    color: var(--main-text, #333);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    @media (min-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

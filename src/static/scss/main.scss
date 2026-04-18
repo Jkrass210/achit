@@ -1,0 +1,11 @@
+@import "blocks/var";
+@import "blocks/function";
+
+@import "import/reset";
+@import "import/fonts";
+
+@import "blocks/general";
+
+@import "blocks/components/*";
+@import "blocks/sections/*";
+@import "blocks/pages/*";

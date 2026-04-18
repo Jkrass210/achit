@@ -1,0 +1,119 @@
+.ver_eye
+	.container
+		.ver_eye__close
+			button.d_close
+		.ver_eye__wrapper
+			.ver_eye__items
+				span.ver_eye__label Цветовая схема
+				.ver_eye__row
+					button.ver_eye__item.gras1.sel(type="button" data-color="white")
+						span.ico.ico_glass_black
+					button.ver_eye__item.gras2(type="button" data-color="black")
+						span.ico.ico_glass_white
+					button.ver_eye__item.gras3(type="button" data-color="blue")
+						span.ico.ico_glass_blue
+			.ver_eye__items
+				span.ver_eye__label Тип текста
+				.ver_eye__row
+					button.ver_eye__item.type1.sel(type="button" data-type="type1")
+						span.ico.ico_type_1
+					button.ver_eye__item.type2(type="button" data-type="type2")
+						span.ico.ico_type_2
+			.ver_eye__items
+				span.ver_eye__label Размер текста
+				.ver_eye__row
+					button.ver_eye__item.text1.sel(type="button" data-size="size1")
+						span.ico.ico_size_1
+					button.ver_eye__item.text2(type="button" data-size="size2")
+						span.ico.ico_size_2
+					button.ver_eye__item.text3(type="button" data-size="size3")
+						span.ico.ico_size_3
+			.ver_eye__items
+				span.ver_eye__label Межбуквенный интервал
+				.ver_eye__row
+					button.ver_eye__item.interval1.sel(type="button" data-interval="interval1")
+						span.ico.ico_interval1
+					button.ver_eye__item.interval2(type="button" data-interval="interval2")
+						span.ico.ico_interval2
+					button.ver_eye__item.interval3(type="button" data-interval="interval3")
+						span.ico.ico_interval3
+			.ver_eye__items
+				span.ver_eye__label Изображенитя
+				.ver_eye__row.switcher
+					button.ver_eye__item.switcher1.sel(type="button" data-img="switcher1") Вкл
+					button.ver_eye__item.switcher2(type="button" data-img="switcher2") Выкл
+			.ver_eye__items
+				button.blindmenu-normallink.eye-normallink Обычная версия
+
+header.header
+	.container
+		.header__top
+			a(href="#").sitelogo
+				.d_flex
+					.d_img
+						img(src="/img/logo.svg", alt="alt")
+					.d_text
+						span.logo_t Дума Ачитского<br> муниципального округа
+						span.logo_b ОФИЦИАЛЬНЫЙ САЙТ
+			.header__top_right
+				button(type="button").btn_mob_burger.js_burger_open
+					<svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.799805 0.799988H21.7998M0.799805 8.79999H21.7998M0.799805 16.8H21.7998" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+					</svg>
+				.d_flex
+					form(action="#" method="post").search_form
+						.search_form__input
+							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="8" cy="8" r="5.5" stroke="#A7A8AB"/>
+								<path d="M12 12L18 17.5" stroke="#A7A8AB" stroke-linecap="round"/>
+							</svg>
+							input(type="text", placeholder="Начните вводить название")
+						.search_form__submit
+							button(type="submit").btn.btn-color-eye
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="8" cy="8" r="5.5" stroke="#0061D9"/>
+									<path d="M12 12L18 17.5" stroke="#0061D9" stroke-linecap="round"/>
+								</svg>
+								span Поиск
+						
+
+
+					button(type="button").btn_search.btn-color-eye.btn-color-mob-eye.js_search_open
+						span.text Поиск
+						i.icon
+							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<circle cx="6" cy="6" r="5.4" stroke="#333333" stroke-width="1.2"/>
+								<path d="M10 10L16 15.5" stroke="#333333" stroke-width="1.2" stroke-linecap="round"/>
+							</svg>
+					button(type="button").btn_glasses.eye_active
+						<svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.15583 1.2153C4.31104 1.16131 4.43873 1.04836 4.51127 0.900918C4.58382 0.753472 4.59538 0.583388 4.54345 0.427483C4.49151 0.271579 4.38027 0.142399 4.2338 0.0679074C4.08733 -0.00658439 3.91741 -0.0203943 3.76083 0.029467L3.29833 0.183634C2.82333 0.341967 2.41917 0.476134 2.09917 0.6228C1.75833 0.778634 1.46 0.969467 1.22333 1.26947C0.985833 1.56947 0.868333 1.9028 0.794167 2.26947C0.725 2.6153 0.686667 3.03863 0.641667 3.5378L0.06 9.92947C0.0211154 10.156 0.00104686 10.3854 0 10.6153C0.00416667 12.7978 1.775 14.5803 3.95833 14.5803C4.89791 14.5805 5.8069 14.2464 6.52278 13.6379C7.23865 13.0293 7.71471 12.186 7.86583 11.2586L8.04833 11.1936C8.63684 10.9837 9.27983 10.9837 9.86833 11.1936L10.0517 11.2586C10.2028 12.1858 10.6787 13.0291 11.3944 13.6376C12.1101 14.2461 13.0189 14.5803 13.9583 14.5803C16.1417 14.5803 17.9117 12.797 17.9167 10.6153C17.9167 10.3814 17.8964 10.1528 17.8558 9.92947L17.275 3.53863C17.23 3.03863 17.1917 2.61613 17.1225 2.27113C17.0483 1.90363 16.9308 1.56947 16.6933 1.2703C16.4558 0.971133 16.1583 0.778633 15.8175 0.623634C15.4975 0.476967 15.0942 0.3428 14.6183 0.184467L14.1558 0.0303003C13.9993 -0.0195611 13.8293 -0.00575112 13.6829 0.0687407C13.5364 0.143232 13.4252 0.272412 13.3732 0.428317C13.3213 0.584221 13.3328 0.754305 13.4054 0.901751C13.4779 1.0492 13.6056 1.16214 13.7608 1.21613L14.1925 1.35947C14.7067 1.53113 15.0458 1.6453 15.2975 1.7603C15.5358 1.86863 15.6425 1.95613 15.7142 2.04613C15.785 2.1353 15.845 2.25947 15.8967 2.51613C15.9508 2.7878 15.9842 3.14363 16.0333 3.68363L16.3792 7.49113C15.8396 7.0739 15.2013 6.80318 14.5263 6.70523C13.8513 6.60728 13.1624 6.68543 12.5264 6.93209C11.8905 7.17875 11.3291 7.58555 10.8967 8.11305C10.4642 8.64055 10.1755 9.27084 10.0583 9.9428C9.33973 9.73492 8.57693 9.73492 7.85833 9.9428C7.7412 9.27084 7.45242 8.64055 7.01999 8.11305C6.58755 7.58555 6.02615 7.17875 5.39022 6.93209C4.75429 6.68543 4.06541 6.60728 3.39038 6.70523C2.71536 6.80318 2.0771 7.0739 1.5375 7.49113L1.5775 7.0478L1.88333 3.68363C1.9325 3.14363 1.96583 2.7878 2.02 2.51697C2.07167 2.25947 2.13167 2.1353 2.20333 2.04613C2.27417 1.95613 2.38083 1.86947 2.61917 1.7603C2.87083 1.6453 3.21 1.53113 3.72417 1.3603L4.15583 1.2153Z" fill="#333333"/>
+						</svg>
+		.header__bottom
+			ul.header__bottom_menu
+				li
+					a(href="#") О думе
+					ul
+						li
+							a(href="#") Полномочия
+						li
+							a(href="#") Регламент
+						li
+							a(href="#") Муниципальная служба
+						li
+							a(href="#") Контакты
+						li
+							a(href="#") История
+				li
+					a(href="#") Депутаты
+				li
+					a(href="#") Деятельность
+				li
+					a(href="#") Документы
+				li
+					a(href="#") Муниципалитет
+			button(type="button").header__bottom_burger.js_burger_open
+				<svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M0.799805 0.799988H24.7998M0.799805 9.79999H24.7998M0.799805 18.8H24.7998" stroke="#0050B2" stroke-width="1.6" stroke-linecap="round"/>
+				</svg>
+	button(type="button").search_form__close Закрыть поиск

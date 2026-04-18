@@ -1,0 +1,20 @@
+.page_inter {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  &__top {
+    padding: 32px;
+    color: var(--main-text, #333);
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    background-color: var(--gray-100, #F5F5F7);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+}
